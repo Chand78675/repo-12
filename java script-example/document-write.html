@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Deleteclick(){
+            result = confirm("Delete Record/n are you sure? want to Delete?");
+            if(result==true){
+                document.write("<h2><font color='red'> Delete Succesfully..</font></h2><br><a href'document-write.html'> Back </a>");
+            }
+            else{
+                alert("Delete canceled");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Deleteclick()">Delete</button>
+</body>
+</html>

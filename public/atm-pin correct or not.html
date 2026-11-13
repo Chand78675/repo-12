@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function VerifyPassword(){
+            var Password = document.getElementById("txtPwd").value.trim();
+            var lblPwd = document.getElementById("lblPwd");
+            if(parseInt(Password)===1234){
+                lblPwd.innerHTML="correct";
+                lblPwd.style.color ="green";
+            }
+            else{
+                if (Password.length>=4){
+                lblPwd.innerHTML="not correct";
+                lblPwd.style.color ="red";
+            }
+            else{
+                lblPwd.innerHTML="";
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt> ATM MACHIN</dt>
+        <dd><input type="password" onkeyup="VerifyPassword()" id="txtPwd" placeholder="Enter your 4 digit pin " maxlength="4"></dd>
+        <dd id="lblPwd"></dd>
+    </dl>
+    <button>Submit Pin</button>
+</body>
+</html>

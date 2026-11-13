@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function VerifyEmail(){
+            var Email = document.getElementById("txtEmail").value;
+            var lblEmailErorr = document.getElementById("lblErorr");
+            if( Email.indexOf("@")==-1){
+                lblEmailErorr.innerHTML = "Invalid Email @ is Compulsary".fontcolor('red').bold();
+
+            }
+            else{
+                lblEmailErorr.innerHTML="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+     <dt> Enter Your Email Id</dt>
+     <dd><input type="text" onblur="VerifyEmail()" id="txtEmail"></dd>
+     <dd id="lblErorr"></dd>
+    </dl>
+</body>
+</html>

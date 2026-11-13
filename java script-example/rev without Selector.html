@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Bodyload(){
+            document.querySelector("img").src="../public/images/iphone.jpeg";
+            document.querySelector(".btnLogin").value="Login";
+            document.querySelector("#btnRegister").value="Register";
+        }
+    </script>
+</head>
+<body onload="Bodyload()">
+    <div>
+        <img width="100" height="100">
+    </div>
+    <div>
+        <form name="frmLogin">
+          <h2> User login</h2>
+          <input type="text" name="text" placeholder="User name">
+          <input type="password" name="pwd" placeholder="Enter your password">
+          <input type="button" class="btnLogin">
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h2>Register</h2>
+            <input type="email" placeholder="Enter your email">
+            <input type="button" id="btnRegister">
+        </form>
+    </div>
+</body>
+</html>

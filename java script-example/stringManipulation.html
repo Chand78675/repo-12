@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function VerifyName(){
+            var userName = document.getElementById("txtName").value;
+            var lblNameErorr = document.getElementById("lblNameErorr");
+            if(userName.length==0){
+                lblNameErorr.innerHTML="Name is Required".fontcolor('red').fontsize(2).bold();
+            } else{
+                if(userName.length<4){
+                  lblNameErorr.innerHTML="Name to short-min-4 character is allow".fontcolor('green').fontsize(2);
+                }
+                else{
+                    lblNameError.innerHTML="";
+                }
+            }
+        }
+        function VerifyChars(){
+            var Comment = document.getElementById("txtComment").value;
+            var lblComment = document.getElementById("lblComment");
+            lblComment.innerHTML= `${100-Comment.length} chars left`;
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt> User Name </dt>
+        <dd><input type="text" onblur="VerifyName()" onkeyup="VerifyName()" id="txtName"></dd>
+        <dd id="lblNameErorr"></dd>
+        <dt> Comment </dt>
+        <dd><textarea rows="4"onkeyup="VerifyChars()" maxlength ="100" cols="40"id="txtComment"></textarea></dd>
+        <dd id="lblComment"></dd>
+    </dl>
+</body>
+</html>

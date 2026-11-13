@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            var categories = ["all","Elactronic","Apple","Mango"];
+            function Bodyload(){
+            categories.map(function(category){
+                var li = document.createElement("li");
+                li.textContent = category;
+                document.querySelector("ol").appendChild(li);
+
+               var option = document.createElement("option");
+                option.text = category;
+                option.value = category;
+                document.querySelector("select").appendChild(option);
+
+                var navitem = document.createElement("span");
+                navitem.innerHTML = `<a href = '${category}.html'> ${category} </a>`;
+                navitem.style.marginRight="30px";
+                document.querySelector("nav").appendChild(navitem);
+                
+                var ulli = document.createElement("li");
+                ulli.innerHTML = `<input type ="checkbox"> <label>${category}</label>`;
+                document.querySelector("ul").appendChild(ulli);
+            })
+        }
+    </script>
+</head>
+<body onload="Bodyload()">
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+    <nav>
+      <h2> Amazon </h2>
+    </nav>
+    <ul>
+
+    </ul>
+</body>
+</html>

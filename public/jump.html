@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+    function skip(limit,skip1,skip2)
+    {
+      for(var i=1;i<=limit;i++)
+      {
+        if(i===skip1||i===skip2)
+      {
+        continue;
+        
+      }
+      document.write(`${i}<br>`);
+      }
+    }
+    var userLimit=(parseInt(prompt("Enter your limit :")));
+    var FirstSkip=(parseInt(prompt("Enter your first skip number :")));
+    var SecondSkip=(parseInt(prompt("Enter your second skip number :")));
+    skip(userLimit, FirstSkip, SecondSkip);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

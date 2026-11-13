@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+    
+</head>
+<body class="container-fluid">
+   <h2 class="bi bi-ticket text-center text-danger"> Book My Show - Admin Dashboard</h2> 
+   <div class="w-25 mt-4">
+        <h2>Manage Movies</h2>
+       <div class="my-25 input-group">
+          <input class="form-control"  id="txtMovie" type="text" placeholder="New Movie"><button class="btn btn-primary">Add Movie</button>
+       </div>
+       <div class="my-4">
+        <button class="btn btn-success bi bi-sort-alpha-down"></button>
+        <button class="btn btn-success bi bi-sort-alpha-up mx-3"></button>
+       </div>
+       <div>
+        <select size="3" id="lstMovies" class="form-select"></select>
+       </div>
+       <div class="mt-2">
+             <span id="lblcount"></span>
+       </div>
+       <div class="mt-4">
+            <button class="btn btn-warning bi bi-pen-fill"> Edit </button>
+            <button class="btn btn-danger mx-3 bi bi-trash-fill"> Delete </button>
+            <button class="btn btn-outline-danger bi bi-trash"> Clear </button>
+       </div>
+   </div>
+</body>
+</html>

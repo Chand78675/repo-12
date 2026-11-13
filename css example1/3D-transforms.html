@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            transform: scale3d(1,1,1) skew(10deg) rotate(40deg);
+            transition: 1s;
+        }
+        img:hover{
+            transform: scale3d(2,2,4);
+            perspective:50px;
+            transition: 3s;
+            box-shadow: 15px 15px 2px  black;
+        }
+    </style>
+</head>
+<body>
+    <img src="../public/image/woman.jpg" width="150" height="200">
+</body>
+</html>

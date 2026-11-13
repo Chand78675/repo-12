@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../src/styles/scripts/emi.js"></script>
+</head>
+<body class="container-fluid big-secondary">
+    <div class="bg-light text-dark p-4 m-4">
+       <div class="h4 text-center">Personal Loan EMI Calculator</div>
+         <div class="my-4 row">
+        <div class="col">
+             Amount you need &#8377;<input type="text" id="textAmount" size="8">
+        </div>
+        <div class="col">
+             for <input type="text" size="2" id="textYears"> years
+        </div>
+        <div class="col">
+             interset rate <input type="text" size="4" id="textRate">%
+        </div>
+       </div>
+    </div>
+    <div class="row my-4">
+     <div class="col">
+        <input type="range" onchange="handleAmountChange()" class="form-range"id="rangeAmount" min="100000" max="1000000" value="100000">
+        <div>
+          <span>&#8377;1,00000</span>
+          <span class="float-end">&#8377,10,00000</span>
+        </div>
+        </div>
+        <div class="col">
+           <input type="range" onchange="handleYearChange()" class="form-range"id="rangeYears" min="1" max="5" value="1">
+        <div>
+          <span>1 year</span>
+          <span class="float-end">5 years</span>
+        </div>
+          </div>
+         <div class="col">
+              <input type="range" onchange="handleRateChange()" class="form-range"id="rangeRate" min="10.45" max="18.45" value="10.45"step="0.1">
+        <div>
+          <span>10.45%</span>
+          <span class="float-end">18.45% </span>
+        </div>
+         </div>
+        </div>
+        <div class="row my-4">
+          <div class="col text-end">
+               <button onclick="CalculateClick()"class="btn btn-primary">Calculate</button>
+          </div>
+        </div>
+        <div class="row my-4 text-center">
+          <span id="lblResult"></span>
+        </div>
+     </div>
+</body>
+</html>

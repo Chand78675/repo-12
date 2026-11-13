@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function RefreshClick(){
+            GenrateCode();
+        }
+    </script>
+</head>
+<body onload =" GenrateCode()">
+    <dl>
+        <h3>User login</h3>
+        <dt> User Name </dt>
+        <dd > <inpute type ="text"></dd>
+        <dt>Password</dt>
+        <dd> <input type ="password"></dd>
+        <dt>Verify Code <button onclick="RefreshClick()" class = "bi bi-arrow-clockwise"></button></dt>
+        <dd id="lblcode"></dd>
+    </dl>
+    <button>Login</button>
+</body>
+</html>

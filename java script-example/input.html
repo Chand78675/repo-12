@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            collection=new
+            URLSearchParams(location.search);
+            document.querySelector("p").innerHTML="search category:" + collection.get('category') + "<br>seraching For:"+ collection.get('product');
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+   <p></p> 
+</body>
+</html>

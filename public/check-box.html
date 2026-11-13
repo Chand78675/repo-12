@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .user{
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+            
+        }
+        form{
+            background-color: aqua;
+            color: rgb(125, 39, 39);
+            padding:5px;
+            border-radius: 10px;
+        }
+        dt{
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        button{
+            background-color: black;
+            color: white;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text"class="user"placeholder="User first Name">
+                <br><br>
+                <input type="text"class="user"placeholder="User last Name">
+            </dd>
+            <dt>Courses</dt>
+            <dd>
+                <input type="checkbox"checked value="HTML"name="course"><label for="course">HTML</label>
+                <br><br>
+                <input type="checkbox"checked value="CSS"name="course"><label for="course">CSS</label>
+                <br><br>
+                <input type="checkbox"checked value="Java-Script"name="course"><label for="course">JAVA-SCRIPT</label>
+            </dd>
+        </dl>
+        <button>submit</button>
+    </form>
+</body>
+</html>

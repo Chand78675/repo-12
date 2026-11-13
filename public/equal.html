@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function VerifyAge(){
+            var age = document.getElementById("txtName").value.trim();
+            var btnSubmit = document.getElementById("btnSubmit");
+           var lblName = document.getElementById("lblName");
+            if(age==""){
+            btnSubmit.disabled = true;
+            lblName.innerHTML="";
+
+            }
+        
+            else if(parseInt(age)>=18){
+                btnSubmit.disabled = false;
+                lblName.innerHTML="You are eligable for vote".fontcolor('green');
+            }
+            else{
+                btnSubmit.disabled = true;
+                lblName.style.color = "red";
+                lblName.innerHTML=" You are not eligible.<br>only eligible person show the click button";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Enter your Age</dt>
+        <dd><input type="text" onkeyup="VerifyAge()" id="txtName"></dd>
+        <dd id="lblName"></dd>
+    </dl>
+    <button id="btnSubmit" disabled>Button</button>
+</body>
+</html>

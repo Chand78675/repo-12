@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     function Bodyload(){
+        window.document.images[0].src="../public/images/women.jpg";
+        window.document.forms[0].elements[2].value="Login";
+        window.document.forms[1].elements[1].value="register"
+     }
+    </script>
+</head>
+<body onload="Bodyload()">
+    <div>
+     <img width="100" height="100">
+    </div>
+    <div>
+        <form>
+            <h2>User Login</h2>
+            <input type="text" placeholder=" User text">
+            <input type="password" placeholder="Enter your password">
+            <input type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Register</h2>
+            <input type="text" placeholder="Enter your email">
+            <input type="button">
+        </form>
+    </div>
+</body>
+</html>

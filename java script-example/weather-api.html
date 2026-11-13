@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+       .bgstyle
+       {
+         background-image: url("../public/images/weather.jpg");
+         background-size: cover;
+       } 
+    </style>
+    <script>
+        function Searchclick(){
+            var Cityname= document.getElementById("TxtCity").value;
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=1318ca6725c69160d346c41fc0612596&units=metric`)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(weatherObj){
+                document.getElementById("lblCity").innerHTML= weatherObj.name;
+                document.getElementById("lblTemp").innerHTML=`${weatherObj.main.temp}&deg;<sup>c</sup>`
+                document.getElementById("lblDescription").innerHTML = `[${weatherObj.weather[0].description}]`;
+            })
+        }       
+    
+        
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="border bg-style w-50 border-2 border-warning rounded rounded-2" style="height: 300px;">
+        <div class="mt-4 d-flex justify-content-center align-items-center">
+            <div class="input-group w-50">
+                <input type="text" class="form-control" placeholder="Enter Your City Name" id="TxtCity">
+                <button onclick="Searchclick()"class="btn btn-warning bi bi-search"></button>
+            </div>
+        </div>
+        <div class="mt-2 p-4">
+            <div id="lblCity" class="fs-3 text-center text-white fw-bold"></div>
+            <div id="lblDecription" class="fs-3 text-center text-white fw-bold"></div>
+            <div class="mt-3">
+                <div id="lblTemp" class="fs-3 text-center text-warning fw-bold"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

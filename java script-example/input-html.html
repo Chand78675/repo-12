@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function SearchClick(){
+            result = prompt("Enter Your String","eg:Search mobile");
+            if(result==null){
+                alert("You Canceled Search");
+            }
+            else if(result==''){
+                alert("Please Provide a Search String\n It can't be empty");
+            }
+            else{
+                document.write("Your are Searching for :" + result);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SearchClick()">Search</button>
+</body>
+</html>

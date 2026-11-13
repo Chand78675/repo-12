@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyName(){
+            var username = document.getElementById("textName").vlaue;
+            var lblName = document.getElementById("lblName").value;
+
+            if(username=="john"){
+                lblName.innerHTML = "User Name Taken-try Another". fontcolor('red'). fontsize(2);
+            }
+        }
+    </script>
+</head>
+<body>
+   <dl>
+    <dt>User Name</dt>
+    <dd><input type="text" id="textName"></dd>
+    <dd id="lblName"></dd>
+   </dl> 
+</body>
+</html>

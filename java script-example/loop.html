@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fetch(`https://fakestoreapi.com/products`)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(products){
+           for(var i=0;i<=products.length;i++){
+            if(products[i].category==="elactronic"||products[i].category==="jewelery"){
+                continue;
+            }
+            document.write(`${products[i].title} - <b>{$products[i].category}</b><br>`);
+           }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
